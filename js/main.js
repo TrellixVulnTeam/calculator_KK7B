@@ -18,9 +18,6 @@ for (let numButton of numButtons) {
 }
 
 // Controller/GUI
-let display = document.getElementById('result');
-let buttons = document.getElementsByTagName('button');
-
 let equalsButton = document.getElementById('equals');
 equalsButton.addEventListener('click', () => {
     alert('hello');
