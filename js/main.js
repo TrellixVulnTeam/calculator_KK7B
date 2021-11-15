@@ -1,19 +1,8 @@
 // Domain
 // let stack = [];
 
-// Controller
-let numButtons = [];
 
-// Layout HTML
-// Construct buttons
-let body = document.body;
-for (var i = 0; i < 10; i++) {
-    let numButton = document.createElement('button');
-    let text = document.createTextNode(i);
-    numButton.appendChild(text);
-    numButton.value = i;
-    numButtons.push(numButton);
-}
+let numButtons = constructButtons();
 
 // Add event listeners to buttons
 for (let numButton of numButtons) {
@@ -25,7 +14,7 @@ for (let numButton of numButtons) {
 
 // Display buttons
 for (let numButton of numButtons) {
-    body.appendChild(numButton);
+    document.body.appendChild(numButton);
 }
 
 // Controller/GUI
@@ -36,3 +25,15 @@ let equalsButton = document.getElementById('equals');
 equalsButton.addEventListener('click', () => {
     alert('hello');
 });
+
+function constructButtons() {
+    let numButtons = [];
+    for (var i = 0; i < 10; i++) {
+        let numButton = document.createElement('button');
+        let text = document.createTextNode(i);
+        numButton.appendChild(text);
+        numButton.value = i;
+        numButtons.push(numButton);
+    }
+    return numButtons;
+}
