@@ -18,23 +18,18 @@ for (var i = 0; i < 10; i++) {
     numButtons.push(numButton);
 }
 
-// Display buttons
-for (var numButton of numButtons) {
 
+// Add event listeners to buttons
+for (var numButton of numButtons) {
+    let v = numButton.value;
+    numButton.addEventListener("click", () => {
+        result.value += v;
+    })
 }
 
 // Controller/GUI
-let buttons = document.getElementsByTagName('button');
 let display = document.getElementById('result');
-
-for (var button of buttons) {
-    if (button.getAttribute('type')) {
-        let v = button.textContent;
-        button.addEventListener("click", (event) => {
-            result.value += v;
-        });
-    }
-}
+let buttons = document.getElementsByTagName('button');
 
 let equalsButton = document.getElementById('equals');
 equalsButton.addEventListener('click', () => {
