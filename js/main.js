@@ -3,8 +3,8 @@
 
 
 let numButtons = constructNumButtons();
-let addButton = constructAddButton();
-let equalsButton = constructEqualsButton();
+let addButton = constructButton('+');
+let equalsButton = constructButton('=');
 
 let allButtons = [].concat(numButtons);
 allButtons.push(addButton);
