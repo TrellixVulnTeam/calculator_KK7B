@@ -2,19 +2,26 @@
 // let stack = [];
 
 
-let numButtons = constructButtons();
+let numButtons = constructNumButtons();
+let addButton = document.createElement('button');
+let text = document.createTextNode('+');
+addButton.appendChild(text);
+addButton.value = '+';
+
+let allButtons = [].concat(numButtons);
+allButtons.push(addButton);
 
 // Add event listeners to buttons
-for (let numButton of numButtons) {
-    let v = numButton.value;
-    numButton.addEventListener("click", () => {
+for (let button of allButtons) {
+    let v = button.value;
+    button.addEventListener("click", () => {
         result.value += v;
     });
 }
 
 // Display buttons
-for (let numButton of numButtons) {
-    document.body.appendChild(numButton);
+for (let button of allButtons) {
+    document.body.appendChild(button);
 }
 
 // Controller/GUI
@@ -23,7 +30,7 @@ equalsButton.addEventListener('click', () => {
     alert('hello');
 });
 
-function constructButtons() {
+function constructNumButtons() {
     let numButtons = [];
     for (var i = 0; i < 10; i++) {
         let numButton = document.createElement('button');
