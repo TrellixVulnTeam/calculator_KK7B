@@ -11,20 +11,21 @@ for (var i = 0; i < 10; i++) {
     let numButton = document.createElement('button');
     let text = document.createTextNode(i);
     numButton.appendChild(text);
-    numButton.type = 'display_on_press';
     numButton.value = i;
-    body.appendChild(numButton);
-
     numButtons.push(numButton);
 }
 
-
 // Add event listeners to buttons
-for (var numButton of numButtons) {
+for (let numButton of numButtons) {
     let v = numButton.value;
     numButton.addEventListener("click", () => {
         result.value += v;
-    })
+    });
+}
+
+// Display buttons
+for (let numButton of numButtons) {
+    body.appendChild(numButton);
 }
 
 // Controller/GUI
