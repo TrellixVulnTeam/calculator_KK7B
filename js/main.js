@@ -31,22 +31,6 @@ function constructButton(symbol) {
     return button;
 }
 
-function constructEqualsButton() {
-    let equalsButton = document.createElement('button');
-    let text = document.createTextNode('=');
-    equalsButton.appendChild(text);
-    equalsButton.value = '=';
-    return equalsButton;
-}
-
-function constructAddButton() {
-    let addButton = document.createElement('button');
-    let text = document.createTextNode('+');
-    addButton.appendChild(text);
-    addButton.value = '+';
-    return addButton;
-}
-
 function constructNumButtons() {
     let numButtons = [];
     for (var i = 0; i < 10; i++) {
