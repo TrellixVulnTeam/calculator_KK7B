@@ -1,0 +1,12 @@
+To do:
+- Calculate sum of two last numbers when equals pressed.
+
+Done:
+- Do not display equals button when pressed.
+- Add equals button.
+- Accumulate input.
+- Add a button for addition.
+- Display button value in input field.
+- Add buttons from 2 to 9.
+- Add display field.
+- Add button 1.
