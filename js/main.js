@@ -34,10 +34,7 @@ function constructButton(symbol) {
 function constructNumButtons() {
     let numButtons = [];
     for (var i = 0; i < 10; i++) {
-        let numButton = document.createElement('button');
-        let text = document.createTextNode(i);
-        numButton.appendChild(text);
-        numButton.value = i;
+        let numButton = constructButton(i);
         numButtons.push(numButton);
     }
     return numButtons;
