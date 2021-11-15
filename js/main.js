@@ -4,9 +4,11 @@
 
 let numButtons = constructNumButtons();
 let addButton = constructAddButton();
+let equalsButton = constructEqualsButton();
 
 let allButtons = [].concat(numButtons);
 allButtons.push(addButton);
+allButtons.push(equalsButton);
 
 // Add event listeners to buttons
 for (let button of allButtons) {
@@ -21,11 +23,13 @@ for (let button of allButtons) {
     document.body.appendChild(button);
 }
 
-// Controller/GUI
-let equalsButton = document.getElementById('equals');
-equalsButton.addEventListener('click', () => {
-    alert('hello');
-});
+function constructEqualsButton() {
+    let equalsButton = document.createElement('button');
+    let text = document.createTextNode('=');
+    equalsButton.appendChild(text);
+    equalsButton.value = '=';
+    return equalsButton;
+}
 
 function constructAddButton() {
     let addButton = document.createElement('button');
