@@ -23,6 +23,14 @@ for (let button of allButtons) {
     document.body.appendChild(button);
 }
 
+function constructButton(symbol) {
+    let button = document.createElement('button');
+    let text = document.createTextNode(symbol);
+    button.appendChild(text);
+    button.value = symbol;
+    return button;
+}
+
 function constructEqualsButton() {
     let equalsButton = document.createElement('button');
     let text = document.createTextNode('=');
