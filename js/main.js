@@ -3,10 +3,7 @@
 
 
 let numButtons = constructNumButtons();
-let addButton = document.createElement('button');
-let text = document.createTextNode('+');
-addButton.appendChild(text);
-addButton.value = '+';
+let addButton = constructAddButton();
 
 let allButtons = [].concat(numButtons);
 allButtons.push(addButton);
@@ -29,6 +26,14 @@ let equalsButton = document.getElementById('equals');
 equalsButton.addEventListener('click', () => {
     alert('hello');
 });
+
+function constructAddButton() {
+    let addButton = document.createElement('button');
+    let text = document.createTextNode('+');
+    addButton.appendChild(text);
+    addButton.value = '+';
+    return addButton;
+}
 
 function constructNumButtons() {
     let numButtons = [];
