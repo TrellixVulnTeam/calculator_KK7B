@@ -1,7 +1,7 @@
 To do:
 - Calculate sum of two last one-digit numbers when equals pressed.
-    - Extract buttons to objects.
-    - Add two one-digit numbers and concatenate result when equals pressed.
+    x Extract buttons to objects.
+    x Add two one-digit numbers and concatenate result when equals pressed.
     - Clear input field when equals pressed and only display result.
 
 Done:

@@ -1,6 +1,6 @@
 // Domain
-// let stack = [];
-
+var a;
+var b;
 
 let numButtons = constructNumButtons();
 let addButton = constructButton('+');
@@ -17,6 +17,21 @@ for (let button of allButtons) {
         result.value += v;
     });
 }
+
+for (var button of numButtons) {
+    let v = button.value;
+    button.addEventListener('click', () => {
+        if (typeof a === 'undefined') {
+            a = parseInt(v, 10);
+        } else {
+            b = parseInt(v, 10);
+        }
+    });
+}
+
+equalsButton.addEventListener('click', () => {
+    result.value += a + b;
+});
 
 // Display buttons
 for (let button of allButtons) {
