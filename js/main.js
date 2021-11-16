@@ -10,6 +10,8 @@ let allButtons = [].concat(numButtons);
 allButtons.push(addButton);
 allButtons.push(equalsButton);
 
+
+
 // Add event listeners to buttons
 for (let button of allButtons) {
     let v = button.value;
@@ -17,6 +19,10 @@ for (let button of allButtons) {
         result.value += v;
     });
 }
+
+equalsButton.addEventListener('click', () => {
+    result.value += a + b;
+});
 
 for (var button of numButtons) {
     let v = button.value;
@@ -29,9 +35,6 @@ for (var button of numButtons) {
     });
 }
 
-equalsButton.addEventListener('click', () => {
-    result.value += a + b;
-});
 
 // Display buttons
 for (let button of allButtons) {
