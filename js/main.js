@@ -14,6 +14,14 @@ equalsButton.addEventListener('click', () => {
     clearInput();
 });
 
+for (let button of allButtons) {
+    button.addEventListener('click', () => {
+        if (typeof a === 'undefined' && typeof b === 'undefined') {
+            clearInput();
+        }
+    });
+}
+
 // Add event listeners to buttons
 for (let button of allButtons) {
     let v = button.value;

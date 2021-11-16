@@ -4,6 +4,7 @@ x Calculate sum of two last one-digit numbers when equals pressed.
     x Add two one-digit numbers and concatenate result when equals pressed.
     x Clear input field when equals pressed and only display result.
     x Restart when equals pressed.
+    - Clear input if new sum inputted
 
 Done:
 - Do not display equals button when pressed.
