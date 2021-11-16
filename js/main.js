@@ -24,6 +24,8 @@ for (let button of allButtons) {
 
 equalsButton.addEventListener('click', () => {
     result.value += a + b;
+    a = undefined;
+    b = undefined;
 });
 
 for (var button of numButtons) {
