@@ -10,7 +10,9 @@ let allButtons = [].concat(numButtons);
 allButtons.push(addButton);
 allButtons.push(equalsButton);
 
-
+equalsButton.addEventListener('click', () => {
+    clearInput();
+});
 
 // Add event listeners to buttons
 for (let button of allButtons) {
@@ -56,4 +58,8 @@ function constructNumButtons() {
         numButtons.push(numButton);
     }
     return numButtons;
+}
+
+function clearInput() {
+    result.value = "";
 }
