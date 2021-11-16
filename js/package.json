@@ -1,0 +1,26 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "A small calculator app",
+  "main": "main.js",
+  "type": "commonjs",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "npx jasmine test/domain/*-test.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/einarkjellback/calculator.git"
+  },
+  "author": "Einar Kjellback",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/einarkjellback/calculator/issues"
+  },
+  "homepage": "https://github.com/einarkjellback/calculator#readme",
+  "devDependencies": {
+    "jasmine": "^3.10.0"
+  }
+}
