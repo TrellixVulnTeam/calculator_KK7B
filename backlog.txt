@@ -1,12 +1,18 @@
 To do:
+- add support for multi digit integers.
+    - Make a numbers object.
+    - Make a build by digit builder for number.
+    - Forward digits from input to a number object.
+    - Switch to another number object when plus button is pressed.
+    - output sum when equals pressed.
+
+Done:
 x Calculate sum of two last one-digit numbers when equals pressed.
     x Extract buttons to objects.
     x Add two one-digit numbers and concatenate result when equals pressed.
     x Clear input field when equals pressed and only display result.
     x Restart when equals pressed.
-    - Clear input if new sum inputted
-
-Done:
+    x Clear input if new sum inputted
 - Do not display equals button when pressed.
 - Add equals button.
 - Accumulate input.

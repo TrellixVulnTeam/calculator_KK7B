@@ -1,6 +1,6 @@
 // Domain
-var a;
-var b;
+let a;
+let b;
 
 let numButtons = constructNumButtons();
 let addButton = constructButton('+');
@@ -36,7 +36,7 @@ equalsButton.addEventListener('click', () => {
     b = undefined;
 });
 
-for (var button of numButtons) {
+for (let button of numButtons) {
     let v = button.value;
     button.addEventListener('click', () => {
         if (typeof a === 'undefined') {
@@ -63,7 +63,7 @@ function constructButton(symbol) {
 
 function constructNumButtons() {
     let numButtons = [];
-    for (var i = 0; i < 10; i++) {
+    for (let i = 0; i < 10; i++) {
         let numButton = constructButton(i);
         numButtons.push(numButton);
     }
