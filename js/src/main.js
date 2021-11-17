@@ -2,10 +2,16 @@ import {
     NumberBuilder
 } from './domain/number.mjs'
 
+import {
+    Calculator
+} from './domain/calculator.mjs';
+
 // Domain
 let a;
 let b;
 let builder = NumberBuilder();
+
+const calculator = Calculator();
 
 let lastPressWasEquals = false;
 
@@ -16,6 +22,29 @@ let equalsButton = constructButton('=');
 let allButtons = [].concat(numButtons);
 allButtons.push(addButton);
 allButtons.push(equalsButton);
+
+for (let button of numButtons) {
+    const v = button.value;
+    button.addEventListener('click', () => {
+        calculator.pressNumber(parseInt(v, 10))
+    });
+}
+
+addButton.addEventListener('click', () => {
+    calculator.pressAdd();
+});
+
+equalsButton.addEventListener('click', () => {
+    calculator.pressEquals();
+});
+
+for (let button of allButtons) {
+    button.addEventListener('click', () => {
+        result.value = calculator.readDisplay();
+    })
+}
+
+/*
 
 equalsButton.addEventListener('click', () => {
     clearInput();
@@ -62,7 +91,7 @@ for (let button of numButtons) {
         }
     });
 }
-
+*/
 
 // Display buttons
 for (let button of allButtons) {
