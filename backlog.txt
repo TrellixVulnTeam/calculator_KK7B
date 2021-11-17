@@ -1,5 +1,6 @@
 To do:
 - Change NumberBuilder so that it is fluent.
+- Make NumberBuilder return a simple number and not a Number object.
 - Make a Calculator object.
 
 Done:

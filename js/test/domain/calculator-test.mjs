@@ -18,4 +18,15 @@ describe('Calculator', () => {
 
         expect(calc.readDisplay()).toBe('29 + 4');
     });
+
+    it('displays result when equals pressed', () => {
+        const calc = Calculator();
+        calc.pressNumber(6);
+        calc.pressNumber(7);
+        calc.pressAdd();
+        calc.pressNumber(1);
+        calc.pressEquals();
+
+        expect(calc.readDisplay()).toBe('68');
+    });
 });
