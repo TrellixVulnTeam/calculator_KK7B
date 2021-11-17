@@ -2,7 +2,7 @@ import {
     NumberBuilder
 } from './number.mjs';
 
-const operation = {
+const operator = {
     ADD: (a, b) => {
         return a + b;
     },
@@ -24,12 +24,12 @@ const Calculator = () => {
         },
         pressAdd: () => {
             display += ' + ';
-            nextOperation = operation.ADD;
+            nextOperation = operator.ADD;
             a = builder.build();
         },
         pressSubtract: () => {
             display += ' - ';
-            nextOperation = operation.SUBTRACT;
+            nextOperation = operator.SUBTRACT;
             a = builder.build();
         },
         pressEquals: () => {
