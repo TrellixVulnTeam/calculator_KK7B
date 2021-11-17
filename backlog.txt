@@ -2,7 +2,7 @@ To do:
 - Change NumberBuilder so that it is fluent.
 - Add support for negative number.
 - Add subtraction functionality.
-    - Add subtraction functionality in Calculator.
+    x Add subtraction functionality in Calculator.
     - Add subtraction button in GUI.
 
 Done:

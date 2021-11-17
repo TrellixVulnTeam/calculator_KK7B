@@ -2,11 +2,20 @@ import {
     NumberBuilder
 } from './number.mjs';
 
+const operation = {
+    ADD: (a, b) => {
+        return a + b;
+    },
+    SUBTRACT: (a, b) => {
+        return a - b;
+    },
+};
+
 const Calculator = () => {
     let display = '';
     let a = 0;
     const builder = NumberBuilder();
-    let nextOperation = '';
+    let nextOperation = undefined;
 
     return {
         pressNumber: (n) => {
@@ -15,24 +24,17 @@ const Calculator = () => {
         },
         pressAdd: () => {
             display += ' + ';
-            nextOperation = '+';
+            nextOperation = operation.ADD;
             a = builder.build();
         },
         pressSubtract: () => {
-            nextOperation = '-';
+            display += ' - ';
+            nextOperation = operation.SUBTRACT;
             a = builder.build();
         },
         pressEquals: () => {
-            let operation = (a, b) => {
-                return a + b;
-            };
-            if (nextOperation === '-') {
-                operation = (a, b) => {
-                    return a - b;
-                };
-            }
             const b = builder.build();
-            display = (operation(a, b)).toString();
+            display = nextOperation(a, b).toString();
         },
         readDisplay: () => {
             return display;

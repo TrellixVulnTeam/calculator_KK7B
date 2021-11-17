@@ -41,4 +41,11 @@ describe('Calculator', () => {
 
         expect(calc.readDisplay()).toBe('88');
     });
+
+    it('displays subtraction symbol', () => {
+        const calc = Calculator();
+        calc.pressSubtract();
+
+        expect(calc.readDisplay()).toBe(' - ');
+    });
 });
