@@ -2,9 +2,12 @@ const Calculator = () => {
     let display = '';
     return {
         pressNumber: (n) => {
-            display = n.toString();
+            display += n.toString();
         },
-        display: () => {
+        pressAdd: () => {
+            display += ' + ';
+        },
+        readDisplay: () => {
             return display;
         }
     };
