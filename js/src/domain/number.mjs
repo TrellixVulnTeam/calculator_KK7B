@@ -1,7 +1,7 @@
 const NumberBuilder = (() => {
     let digits = [];
 
-    return {
+    const builder = {
         add: (digit) => {
             digits.push(digit);
         },
@@ -13,8 +13,12 @@ const NumberBuilder = (() => {
                 number *= 10;
             }
             return number / 10;
-        }
+        },
+        buildNegative: () => {
+            return -builder.build();
+        },
     };
+    return builder;
 });
 
 export {

@@ -20,4 +20,13 @@ describe('number builder', () => {
 
         expect(number).toEqual(194);
     });
+
+    it('produces negative numbers', () => {
+        const builder = NumberBuilder();
+        builder.add(9);
+        builder.add(5);
+        const number = builder.buildNegative();
+
+        expect(number).toBe(-95);
+    });
 });
