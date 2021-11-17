@@ -3,7 +3,7 @@ To do:
 - Add support for negative number.
 - Add subtraction functionality.
     x Add subtraction functionality in Calculator.
-    - Add subtraction button in GUI.
+    x Add subtraction button in GUI.
 
 Done:
 - Make NumberBuilder return a simple number and not a Number object.

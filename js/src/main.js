@@ -5,10 +5,12 @@ const calculator = Calculator();
 
 let numButtons = constructNumButtons();
 let addButton = constructButton('+');
+let subtractButton = constructButton('-');
 let equalsButton = constructButton('=');
 
 let allButtons = [].concat(numButtons);
 allButtons.push(addButton);
+allButtons.push(subtractButton);
 allButtons.push(equalsButton);
 
 for (let button of numButtons) {
@@ -21,6 +23,10 @@ for (let button of numButtons) {
 addButton.addEventListener('click', () => {
     calculator.pressAdd();
 });
+
+subtractButton.addEventListener('click', () => {
+    calculator.pressSubtract();
+})
 
 equalsButton.addEventListener('click', () => {
     calculator.pressEquals();
