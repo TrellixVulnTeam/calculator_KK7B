@@ -8,9 +8,7 @@ describe('number builder', () => {
         builder.add(2);
         let number = builder.build();
 
-        expect(number).toEqual({
-            value: 2
-        });
+        expect(number).toEqual(2);
     });
 
     it('produces a number given multiple digits', () => {
@@ -20,8 +18,6 @@ describe('number builder', () => {
         builder.add(4);
         let number = builder.build();
 
-        expect(number).toEqual({
-            value: 194
-        });
+        expect(number).toEqual(194);
     });
 });

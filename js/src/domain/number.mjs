@@ -12,9 +12,7 @@ const NumberBuilder = (() => {
                 number += digits.pop();
                 number *= 10;
             }
-            return {
-                value: number / 10
-            };
+            return number / 10;
         }
     };
 });

@@ -14,10 +14,10 @@ const Calculator = () => {
         },
         pressAdd: () => {
             display += ' + ';
-            a = builder.build().value;
+            a = builder.build();
         },
         pressEquals: () => {
-            display = (a + builder.build().value).toString();
+            display = (a + builder.build()).toString();
         },
         readDisplay: () => {
             return display;

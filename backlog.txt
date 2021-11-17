@@ -1,9 +1,9 @@
 To do:
 - Change NumberBuilder so that it is fluent.
 - Make NumberBuilder return a simple number and not a Number object.
-- Make a Calculator object.
 
 Done:
+- Make a Calculator object.
 - add support for non-negative multi digit integers.
     x Make a numbers closure.
     x Make a build by digit builder for number.
