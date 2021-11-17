@@ -1,7 +1,8 @@
 To do:
-- add support for multi digit integers.
-    - Make a numbers object.
-    - Make a build by digit builder for number.
+- Change NumberBuilder so that it is fluent.
+- add support for non-negative multi digit integers.
+    x Make a numbers closure.
+    x Make a build by digit builder for number.
     - Forward digits from input to a number object.
     - Switch to another number object when plus button is pressed.
     - output sum when equals pressed.

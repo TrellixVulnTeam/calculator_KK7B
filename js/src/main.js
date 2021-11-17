@@ -1,6 +1,13 @@
+import {
+    NumberBuilder
+} from './domain/number.mjs'
+
 // Domain
 let a;
 let b;
+let builderA = NumberBuilder();
+let builderB = NumberBuilder();
+
 
 let numButtons = constructNumButtons();
 let addButton = constructButton('+');
@@ -31,7 +38,7 @@ for (let button of allButtons) {
 }
 
 equalsButton.addEventListener('click', () => {
-    result.value += a + b;
+    result.value += builderA.build().value + builderB.build().value;
     a = undefined;
     b = undefined;
 });
@@ -41,8 +48,10 @@ for (let button of numButtons) {
     button.addEventListener('click', () => {
         if (typeof a === 'undefined') {
             a = parseInt(v, 10);
+            builderA.add(parseInt(v, 10));
         } else {
             b = parseInt(v, 10);
+            builderB.add(parseInt(v, 10));
         }
     });
 }
