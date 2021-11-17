@@ -57,5 +57,6 @@ describe('Calculator', () => {
         calc.pressEquals();
 
         expect(calc.readDisplay()).toBe('-3');
+
     });
 });

@@ -1,7 +1,8 @@
 To do:
 - Change NumberBuilder so that it is fluent.
+- Reset Calculator display on inputting new expression.
 - Add support for negative number.
-    - Subtraction is allowed to produce negative numbers.
+    x Subtraction is allowed to produce negative numbers.
     - You can input negative numbers.
 
 Done:
