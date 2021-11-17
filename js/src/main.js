@@ -37,8 +37,12 @@ for (let button of allButtons) {
     });
 }
 
+addButton.addEventListener('click', () => {
+    a = builderA.build().value;
+});
+
 equalsButton.addEventListener('click', () => {
-    result.value += builderA.build().value + builderB.build().value;
+    result.value += a + builderA.build().value;
     a = undefined;
     b = undefined;
 });
@@ -52,6 +56,7 @@ for (let button of numButtons) {
         } else {
             b = parseInt(v, 10);
             builderB.add(parseInt(v, 10));
+            builderA.add(parseInt(v, 10));
         }
     });
 }
