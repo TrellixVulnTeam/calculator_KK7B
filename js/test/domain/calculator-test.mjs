@@ -29,4 +29,16 @@ describe('Calculator', () => {
 
         expect(calc.readDisplay()).toBe('68');
     });
+
+    it('subtracts two numbers', () => {
+        const calc = Calculator();
+        calc.pressNumber(9);
+        calc.pressNumber(8);
+        calc.pressSubtract();
+        calc.pressNumber(1);
+        calc.pressNumber(0);
+        calc.pressEquals();
+
+        expect(calc.readDisplay()).toBe('88');
+    });
 });
