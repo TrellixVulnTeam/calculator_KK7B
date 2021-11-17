@@ -1,13 +1,14 @@
 To do:
 - Change NumberBuilder so that it is fluent.
+- Make a Calculator object.
+
+Done:
 - add support for non-negative multi digit integers.
     x Make a numbers closure.
     x Make a build by digit builder for number.
-    - Forward digits from input to a number object.
-    - Switch to another number object when plus button is pressed.
-    - output sum when equals pressed.
-
-Done:
+    x Forward digits from input to a number object.
+    x Switch to another number object when plus button is pressed.
+    x output sum when equals pressed.
 x Calculate sum of two last one-digit numbers when equals pressed.
     x Extract buttons to objects.
     x Add two one-digit numbers and concatenate result when equals pressed.

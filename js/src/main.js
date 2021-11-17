@@ -5,10 +5,9 @@ import {
 // Domain
 let a;
 let b;
-let builderA = NumberBuilder();
+let builder = NumberBuilder();
 
 let lastPressWasEquals = false;
-
 
 let numButtons = constructNumButtons();
 let addButton = constructButton('+');
@@ -45,24 +44,21 @@ for (let button of allButtons) {
 }
 
 addButton.addEventListener('click', () => {
-    a = builderA.build().value;
+    a = builder.build().value;
 });
 
 equalsButton.addEventListener('click', () => {
     lastPressWasEquals = true;
-
-    result.value += a + builderA.build().value;
-    a = undefined;
-    b = undefined;
+    result.value += a + builder.build().value;
 });
 
 for (let button of numButtons) {
     let v = button.value;
     button.addEventListener('click', () => {
         if (typeof a === 'undefined') {
-            builderA.add(parseInt(v, 10));
+            builder.add(parseInt(v, 10));
         } else {
-            builderA.add(parseInt(v, 10));
+            builder.add(parseInt(v, 10));
         }
     });
 }

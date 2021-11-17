@@ -9,7 +9,7 @@ const NumberBuilder = (() => {
             let number = 0;
             digits.reverse();
             while (digits.length > 0) {
-                number += digits.pop(1);
+                number += digits.pop();
                 number *= 10;
             }
             return {
