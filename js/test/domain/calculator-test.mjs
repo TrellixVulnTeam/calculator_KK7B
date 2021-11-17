@@ -48,4 +48,14 @@ describe('Calculator', () => {
 
         expect(calc.readDisplay()).toBe(' - ');
     });
+
+    it('subtracts to negative numbers', () => {
+        const calc = Calculator();
+        calc.pressNumber(2);
+        calc.pressSubtract();
+        calc.pressNumber(5);
+        calc.pressEquals();
+
+        expect(calc.readDisplay()).toBe('-3');
+    });
 });

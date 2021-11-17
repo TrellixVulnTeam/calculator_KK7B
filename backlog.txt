@@ -1,11 +1,13 @@
 To do:
 - Change NumberBuilder so that it is fluent.
 - Add support for negative number.
+    - Subtraction is allowed to produce negative numbers.
+    - You can input negative numbers.
+
+Done:
 - Add subtraction functionality.
     x Add subtraction functionality in Calculator.
     x Add subtraction button in GUI.
-
-Done:
 - Make NumberBuilder return a simple number and not a Number object.
 - Make a Calculator object.
 - add support for non-negative multi digit integers.
