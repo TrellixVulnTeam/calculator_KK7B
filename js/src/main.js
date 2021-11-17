@@ -6,7 +6,8 @@ import {
 let a;
 let b;
 let builderA = NumberBuilder();
-let builderB = NumberBuilder();
+
+let lastPressWasEquals = false;
 
 
 let numButtons = constructNumButtons();
@@ -23,9 +24,15 @@ equalsButton.addEventListener('click', () => {
 
 for (let button of allButtons) {
     button.addEventListener('click', () => {
-        if (typeof a === 'undefined' && typeof b === 'undefined') {
+        if (lastPressWasEquals) {
             clearInput();
         }
+    });
+}
+
+for (let button of numButtons.concat([addButton])) {
+    button.addEventListener('click', () => {
+        lastPressWasEquals = false;
     });
 }
 
@@ -42,6 +49,8 @@ addButton.addEventListener('click', () => {
 });
 
 equalsButton.addEventListener('click', () => {
+    lastPressWasEquals = true;
+
     result.value += a + builderA.build().value;
     a = undefined;
     b = undefined;
@@ -51,11 +60,8 @@ for (let button of numButtons) {
     let v = button.value;
     button.addEventListener('click', () => {
         if (typeof a === 'undefined') {
-            a = parseInt(v, 10);
             builderA.add(parseInt(v, 10));
         } else {
-            b = parseInt(v, 10);
-            builderB.add(parseInt(v, 10));
             builderA.add(parseInt(v, 10));
         }
     });
