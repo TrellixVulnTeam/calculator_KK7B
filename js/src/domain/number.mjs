@@ -5,7 +5,7 @@ const NumberBuilder = (() => {
         add: (digit) => {
             digits.push(digit);
         },
-        build: () => {
+        buildPositive: () => {
             let number = 0;
             digits.reverse();
             while (digits.length > 0) {
@@ -15,7 +15,7 @@ const NumberBuilder = (() => {
             return number / 10;
         },
         buildNegative: () => {
-            return -builder.build();
+            return -builder.buildPositive();
         },
     };
     return builder;

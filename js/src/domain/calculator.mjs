@@ -25,15 +25,15 @@ const Calculator = () => {
         pressAdd: () => {
             display += ' + ';
             nextOperation = operator.ADD;
-            a = builder.build();
+            a = builder.buildPositive();
         },
         pressSubtract: () => {
             display += ' - ';
             nextOperation = operator.SUBTRACT;
-            a = builder.build();
+            a = builder.buildPositive();
         },
         pressEquals: () => {
-            const b = builder.build();
+            const b = builder.buildPositive();
             display = nextOperation(a, b).toString();
         },
         readDisplay: () => {

@@ -57,6 +57,16 @@ describe('Calculator', () => {
         calc.pressEquals();
 
         expect(calc.readDisplay()).toBe('-3');
+    });
 
+    it('can add two numbers where first number is negative', () => {
+        const calc = Calculator();
+        calc.pressSubtract();
+        calc.pressNumber(3);
+        calc.pressAdd();
+        calc.pressNumber(4);
+        calc.pressEquals();
+
+        expect(calc.readDisplay()).toBe('1');
     });
 });

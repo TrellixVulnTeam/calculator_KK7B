@@ -6,7 +6,7 @@ describe('number builder', () => {
     it('produces a number given a digit', () => {
         let builder = NumberBuilder();
         builder.add(2);
-        let number = builder.build();
+        let number = builder.buildPositive();
 
         expect(number).toEqual(2);
     });
@@ -16,7 +16,7 @@ describe('number builder', () => {
         builder.add(1);
         builder.add(9);
         builder.add(4);
-        let number = builder.build();
+        let number = builder.buildPositive();
 
         expect(number).toEqual(194);
     });
