@@ -4,6 +4,7 @@ To do:
 - Add support for negative number.
     x Subtraction is allowed to produce negative numbers.
     - You can input negative numbers.
+- Add support for multiplication and division.
 
 Done:
 - Add subtraction functionality.
