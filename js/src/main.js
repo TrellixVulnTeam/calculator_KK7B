@@ -14,7 +14,7 @@ allButtons.push(equalsButton);
 for (let button of numButtons) {
     const v = button.value;
     button.addEventListener('click', () => {
-        calculator.pressNumber(parseInt(v, 10))
+        calculator.pressNumber(parseInt(v, 10));
     });
 }
 
@@ -29,7 +29,7 @@ equalsButton.addEventListener('click', () => {
 for (let button of allButtons) {
     button.addEventListener('click', () => {
         result.value = calculator.readDisplay();
-    })
+    });
 }
 
 // Display buttons
